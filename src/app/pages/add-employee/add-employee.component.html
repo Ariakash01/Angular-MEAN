@@ -1,0 +1,76 @@
+<form [formGroup]="empForm" class="empForm" (ngSubmit)="empFormSubmit()" fxLayout="column" fxLayoutAlign="center center">
+    <div class="item" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem" >
+        <mat-form-field fxFlex="25%">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="emailId" placeholder="Ex. pat@example.com">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="25%">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+    </div>
+
+    <div class="item" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem">
+        <mat-form-field fxFlex="25%">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" placeholder="Enter first name">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="25%">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" placeholder="Enter last name">
+        </mat-form-field>
+    </div>
+
+    <div class="item" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem">
+        <mat-form-field fxFlex="25%">
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phone" placeholder="Enter phone number">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="25%">
+            <mat-label>Department</mat-label>
+            <mat-select formControlName="department">
+                <mat-option value="IT">IT</mat-option>
+                <mat-option value="HR">HR</mat-option>
+                <mat-option value="Finance">Finance</mat-option>
+                <!-- Add more departments here -->
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="item" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem">
+        <mat-form-field fxFlex="25%">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+                <mat-option value="Male">Male</mat-option>
+                <mat-option value="Female">Female</mat-option>
+                <mat-option value="Other">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="25%">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateOfJoining">
+        </mat-form-field>
+    </div>
+
+    <div class="item" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem">
+        <mat-form-field fxFlex="25%">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address" placeholder="Enter address">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="25%">
+            <mat-label>Role</mat-label>
+            <input matInput formControlName="role" placeholder="Enter role">
+        </mat-form-field>
+    </div>
+
+    <div class="row form-btn" fxLayout="row" fxLayoutGap="1rem">
+        <button type="submit"  class="submitBtn">
+            Submit
+        </button>
+    </div>
+</form>

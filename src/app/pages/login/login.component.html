@@ -1,0 +1,22 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" fxLayout="column" fxLayoutGap="10px">
+
+        <div fxLayout="column">
+            <input type="email" formControlName="email" placeholder="Email">
+            @if (loginForm.controls.email.invalid && loginForm.controls.email.touched) {
+            <p class="error">Invalid email</p>
+            }
+        </div>
+
+        <div fxLayout="column">
+            <input type="password" formControlName="password" placeholder="Password">
+            @if (loginForm.controls.password.invalid && loginForm.controls.password.touched) {
+            <p class="error">Password must be at least 6 characters</p>
+            }
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid" fxLayoutAlign="center center">Login</button>
+    </form>
+    <p>Don't have an account? <span routerLink="/register">Register</span></p>
+</div>

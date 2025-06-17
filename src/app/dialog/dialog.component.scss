@@ -1,0 +1,30 @@
+mat-dialog-content{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    p{
+   
+        align-content: center;
+        margin-bottom: 0.8rem;
+    }
+    mat-icon{
+      
+    }
+}
+
+.orange{
+    color: orange;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .blue {
+    color: blue;
+  }
+  
+  

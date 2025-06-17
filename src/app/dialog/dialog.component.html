@@ -1,0 +1,14 @@
+
+    <h2 mat-dialog-title>Leave page?</h2>
+<mat-dialog-content class="{{ data.color}}">
+  <span class="material-symbols-outlined"></span>
+ <mat-icon ></mat-icon>
+<p >Form has unsaved changes. Leave page?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)=" dialogClose(false)">Stay</button>
+  <button mat-button mat-dialog-close (click)=" dialogClose(true)">Leave</button>
+
+
+</mat-dialog-actions>
+

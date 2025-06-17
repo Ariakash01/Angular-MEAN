@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+        <input type="text" formControlName="username" placeholder="Username">
+        @if (registerForm.controls.username.invalid && registerForm.controls.username.touched) {
+        <p class="error">Username is required</p>
+        }
+
+        <input type="email" formControlName="email" placeholder="Email">
+        @if (registerForm.controls.email.invalid && registerForm.controls.email.touched) {
+        <p class="error">Invalid email</p>
+        }
+
+        <input type="password" formControlName="password" placeholder="Password">
+        @if (registerForm.controls.password.invalid && registerForm.controls.password.touched) {
+        <p class="error">Password must be at least 6 characters</p>
+        }
+
+        <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+    <p>Already have an account? <span routerLink="/login">Login</span></p>
+</div>
